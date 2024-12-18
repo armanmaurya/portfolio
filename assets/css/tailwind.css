@@ -34,6 +34,10 @@ body {
     position: absolute;
 }
 
+.relative {
+    position: relative;
+}
+
 .fixed {
     position: fixed;
 }
@@ -48,6 +52,8 @@ body {
 .px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
 .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
 .px-4 { padding-left: 1rem; padding-right: 1rem; }
+.px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
 
 /* Padding - Top */
 .pt-1 { padding-top: 0.25rem; }
@@ -105,4 +111,14 @@ body {
 /* Width */
 .w-full { width: 100%; }
 
+/* Text - Color */
+.text-white { color: #fff; }
+
 .overflow-hidden { overflow: hidden; }
+
+/* Hover - Cursor Change*/
+.hover\:cursor-pointer:hover { cursor: pointer; }
+
+/* Font - Family*/
+.font-mono { font-family: "Source Code Pro", monospace; }
+.font-pop { font-family: Poppins, sans-serif; }

@@ -1,0 +1,52 @@
+.home-page-name {
+  animation: fadeAndMoveIn 1s ease-in-out;
+}
+
+@keyframes fadeAndMoveIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hover-under-animation {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-under-animation:hover:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  background-color: magenta;
+  animation: hoverUnderAnimation 0.3s forwards;
+}
+
+.nav-name {
+    font-family: Poppins, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+nav div {
+    color: rgb(187, 187, 187);
+}
+
+@keyframes hoverUnderAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
