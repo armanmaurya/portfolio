@@ -6,39 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/tailwind.css" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <title>Portfolio | Arman Maurya</title>
 </head>
 
-<body class="h-screen overflow-hidden" style="background-color: rgb(23, 7, 43)">
+<body class="h-screen overflow-hidden">
     <div class="h-full">
-        <nav class="flex items-center pt-2 fixed text-white w-full">
-            <div class="mr-4 text-3xl nav-name px-6">Arman</div>
-            <div class="absolute flex items-center justify-center w-full">
-                <div class="mx-4 hover:cursor-pointer font-mono hover-under-animation">About</div>
-                <div class="mx-4 hover:cursor-pointer font-mono hover-under-animation">Projects</div>
-                <div class="mx-4 hover:cursor-pointer font-mono hover-under-animation">Skills</div>
-            </div>
-
-        </nav>
+        <!-- Navigation Bar -->
+        <div id="navbar"></div>
+        <!-- Home Page -->
         <div class="flex items-center justify-center h-full">
             <div class="flex justify-between w-full">
+                <!-- Name -->
                 <div class="flex justify-center items-center w-full home-page-name">
                     <div>
                         <h1 class="name">&lt;Arman <br> Maurya/&gt;</h1>
                         <p class="description text-white">Full Stack Developer.</p>
                     </div>
                 </div>
+                <!-- Image -->
                 <div class="flex justify-center items-center w-full">
-                    <div>
-                        Image
+                    <div class="">
+                        <img class="" style="width: 400px; height: 400px; object-position: 0 0px; object-fit: cover; border-top-left-radius: 100px; border-end-end-radius: 100px;" src="./assets/images/profile-photo.jpg" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        fetch('components/navbar.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Navbar not found.');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
     <script src="./assets/js/script.js"></script>
 </body>
 
