@@ -22,3 +22,56 @@ html {
 #testimonials .shadow {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+#what-i-know {
+    background: linear-gradient(to right, #ebf8ff, #dbeafe);
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 0.375rem;
+    background-color: #e0f2fe;
+    color: #1e3a8a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background-color: #bae6fd;
+}
+
+.active-tab {
+    background-color: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+.tab-content {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.animate-fade-in-delay {
+    animation: fadeIn 1.5s ease-in-out;
+}
