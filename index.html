@@ -4,46 +4,105 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/tailwind.css" />
-    <title>Portfolio | Arman Maurya</title>
+    <title>Your Name | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="h-screen overflow-hidden">
-    <div class="h-full">
-        <!-- Navigation Bar -->
-        <div id="navbar"></div>
-        <!-- Home Page -->
-        <div class="flex items-center justify-center h-full">
-            <div class="flex justify-between w-full">
-                <!-- Name -->
-                <div class="flex justify-center items-center w-full home-page-name">
-                    <div>
-                        <h1 class="name">&lt;Arman <br> Maurya/&gt;</h1>
-                        <p class="description text-white">Full Stack Developer.</p>
-                    </div>
-                </div>
-                <!-- Image -->
-                <div class="flex justify-center items-center w-full">
-                    <div class="">
-                        <img class="" style="width: 400px; height: 400px; object-position: 0 0px; object-fit: cover; border-top-left-radius: 100px; border-end-end-radius: 100px;" src="./assets/images/profile-photo.jpg" alt="">
-                    </div>
-                </div>
+<body class="bg-gray-100 text-gray-900 font-sans">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col items-center justify-center text-center px-4 bg-white">
+        <h1 class="text-5xl font-bold mb-4">Hi, I'm Your Name</h1>
+        <p class="text-xl text-gray-700 mb-6">
+            <span id="typed-text"></span>
+        </p>
+        <a href="#projects" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">View
+            Projects</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 px-4 text-center bg-gray-100" id="about">
+        <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+        <p class="text-gray-700 max-w-xl mx-auto">
+            I'm a front-end developer passionate about building user-friendly and visually appealing websites using
+            HTML, CSS, JavaScript, and TailwindCSS.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-16 px-4 bg-white" id="skills">
+        <h2 class="text-3xl font-semibold text-center mb-8">Skills</h2>
+        <div class="grid gap-6 max-w-5xl mx-auto grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 text-center">
+            <div class="p-4">
+                <i class="fab fa-html5 text-4xl text-orange-600 mb-2"></i>
+                <h3 class="text-xl font-bold">HTML</h3>
             </div>
+            <div class="p-4">
+                <i class="fab fa-css3-alt text-4xl text-blue-600 mb-2"></i>
+                <h3 class="text-xl font-bold">CSS</h3>
+            </div>
+            <div class="p-4">
+                <i class="fab fa-js text-4xl text-yellow-500 mb-2"></i>
+                <h3 class="text-xl font-bold">JavaScript</h3>
+            </div>
+            <div class="p-4">
+                <i class="fab fa-react text-4xl text-blue-500 mb-2"></i>
+                <h3 class="text-xl font-bold">React</h3>
+            </div>
+            <!-- Add more skills as needed -->
         </div>
-    </div>
-    <script>
-        fetch('components/navbar.html')
-            .then(response => {
-                if (!response.ok) throw new Error('Navbar not found.');
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('navbar').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading navbar:', error));
-    </script>
-    <script src="./assets/js/script.js"></script>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-16 px-4 bg-white" id="projects">
+        <h2 class="text-3xl font-semibold text-center mb-8">Projects</h2>
+        <div class="grid gap-6 max-w-5xl mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="bg-gray-100 p-4 rounded-lg shadow">
+                <img src="project1.jpg" alt="Project 1" class="w-full h-40 object-cover rounded mb-4">
+                <h3 class="text-xl font-bold mb-2">Project 1</h3>
+                <p class="text-gray-600 mb-2">A simple project description.</p>
+                <a href="#" class="text-blue-600 hover:underline">View Project</a>
+            </div>
+            <!-- Add more projects by copying this block -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 px-4 text-center bg-gray-100" id="contact">
+        <h2 class="text-3xl font-semibold mb-4">Contact Me</h2>
+        <p class="text-gray-700 mb-6">Want to work together? Let's connect.</p>
+        <a href="mailto:your.email@example.com"
+            class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Send Email</a>
+    </section>
+
+    <!-- Social Links Section -->
+    <section class="py-16 px-4 text-center bg-white" id="social">
+        <h2 class="text-3xl font-semibold mb-4">Follow Me</h2>
+        <p class="text-gray-700 mb-6">Connect with me on social media platforms.</p>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-blue-600 hover:underline">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" class="text-gray-900 hover:underline">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://instagram.com/yourusername" target="_blank" class="text-pink-600 hover:underline">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://codeforces.com/profile/yourusername" target="_blank" class="text-red-600 hover:underline">
+                <i class="fas fa-code"></i> Codeforces
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 bg-white border-t">
+        <p class="text-gray-500 text-sm">© 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>

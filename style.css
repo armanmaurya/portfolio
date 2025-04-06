@@ -1,0 +1,24 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#skills i {
+    display: block;
+    margin: 0 auto;
+}
+
+#projects img {
+    transition: transform 0.3s ease;
+}
+
+#projects img:hover {
+    transform: scale(1.05);
+}
+
+#testimonials {
+    background-color: #f9fafb;
+}
+
+#testimonials .shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
